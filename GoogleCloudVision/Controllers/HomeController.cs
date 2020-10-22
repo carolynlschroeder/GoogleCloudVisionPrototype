@@ -64,7 +64,7 @@ namespace GoogleCloudVision.Controllers
                 var response =
                     client.UploadString(
                         "https://vision.googleapis.com/v1/images:annotate?key=" +
-                        "AIzaSyClwLb7mCHxhD-GcgNOOCQp8vM_qi5QHew", JsonConvert.SerializeObject(Mainrequests));
+                        "ApiKey", JsonConvert.SerializeObject(Mainrequests));
 
                 //var ret = Json(data: response);
                 var jsonReturn = JsonConvert.DeserializeObject<JsonReturn>(response);
